@@ -16,6 +16,8 @@ for r, d, f in os.walk(path + "/downloads/"):
                 print('does not exist')
             else:
                 print('exists')
+            
+            
 
         else:
             print('Cannot guess file type!' + file)
