@@ -6,4 +6,9 @@ path = os.getcwd()
 
 for r, d, f in os.walk(path + "/downloads/"):
     for file in f:
-        print(file)
+        kind = filetype.guess(path + "/downloads/" + file)
+        'print(Path(file).suffix)'
+        if kind is None:
+            print('Cannot guess file type!')
+
+        print(str(kind.mime))
