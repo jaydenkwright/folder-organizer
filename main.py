@@ -4,4 +4,6 @@ import filetype
 
 path = os.getcwd()
 
-print(path)
+for r, d, f in os.walk(path + "/downloads/"):
+    for file in f:
+        print(file)
